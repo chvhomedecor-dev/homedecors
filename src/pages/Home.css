@@ -114,9 +114,12 @@ nav a:hover::after {
 .hero-content {
   text-align: center;
   animation: fadeUp 1.5s ease;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-/* button at image edge */
+/* button at bottom center of hero banner */
 .btn {
   padding: 15px 38px;
   border: 2px solid transparent;
@@ -125,9 +128,10 @@ nav a:hover::after {
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.4s ease;
-
+  font-size: 16px;
+  font-weight: 600;
   position: absolute;
-  bottom: 20px;
+  bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 5;

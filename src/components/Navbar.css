@@ -1,25 +1,253 @@
-.navbar {
-  position: sticky; top: 0; background: #0b2a59; padding: 6px 30px; 
-  display: flex; justify-content: space-between; align-items: center; 
-  z-index: 1000; font-family: 'Playfair Display', serif; box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-}
-.logo { font-size: 40px; color: #ffffff; font-weight: 700; transition: 0.4s; cursor: pointer; }
-.logo:hover { letter-spacing: 1px; }
-.navbar nav { display: flex; gap: 40px; }
-.nav-link { 
-  text-decoration: none; color: #ffffff; position: relative; 
-  transition: 0.3s; font-size: 18px; padding: 8px 0; 
-}
-.nav-link::after { 
-  content: ''; position: absolute; width: 0; height: 2px; background: #c9a74f; 
-  left: 50%; bottom: -6px; transform: translateX(-50%); transition: 0.4s; 
-}
-.nav-link:hover::after { width: 100%; }
-.nav-link:hover { transform: translateY(-2px); color: #c9a74f; }
+/* ========================================
+   COMPLETE NAVBAR - CUSTOM DRAWER STYLING
+=========================================== */
 
-/* Mobile */
+/* BASE NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #0b2a59;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  font-family: 'Playfair Display', serif;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* LEFT CONTAINER */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  transition: 0.3s;
+}
+
+.logo:hover .logo-img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 2px 4px rgba(201, 167, 79, 0.4));
+}
+
+/* DESKTOP NAV */
+.desktop-nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+  transition: 0.3s;
+  font-size: 18px;
+  padding: 8px 0;
+  font-weight: 500;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #c9a74f;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  transition: 0.4s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  transform: translateY(-2px);
+  color: #c9a74f;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 3px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: 1px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* MOBILE BACKDROP */
+.mobile-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+/* ========================================
+   MOBILE - CUSTOM NAVIGATION DRAWER
+=========================================== */
 @media (max-width: 768px) {
-  .navbar { flex-direction: column; gap: 15px; padding: 15px; }
-  .navbar nav { gap: 20px; }
-  .logo { font-size: 28px; }
+  .hamburger {
+    display: flex;
+    margin-left: -150px;
+  }
+  
+  /* DRAWER - HIDDEN OFF SCREEN */
+ .desktop-nav {
+    position: fixed;
+    top: auto; /* ✅ Override to allow bottom positioning */
+    bottom: 0;
+    left: 20px; /* ✅ Slight offset from left edge */
+    right: 20px; /* ✅ Span near full width */
+    width: auto; /* ✅ Flexible width */
+    height: 70vh; /* ✅ Low/partial height - adjust to 60vh or 80vh as needed */
+    max-height: 500px; /* ✅ Cap for very tall content */
+    background: linear-gradient(180deg, 
+      rgba(11, 42, 89, 1) 0%, 
+      rgba(26, 58, 111, 1) 50%, 
+      rgba(11, 42, 89, 1) 100%);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch; /* ✅ Full width items */
+    padding: 30px 20px 40px; /* ✅ More balanced padding */
+    gap: 0;
+    z-index: 1002;
+    transform: translateY(100%); /* ✅ HIDDEN BELOW SCREEN */
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 24px 24px 0 0; /* ✅ Rounded top corners for bottom sheet look */
+    box-shadow: 0 -6px 30px rgba(0, 0, 0, 0.4); /* ✅ Shadow above for elevation */
+    border: 1px solid rgba(201, 167, 79, 0.2);
+    border-bottom: none; /* ✅ No bottom border */
+    overflow-y: auto; /* ✅ Scroll if content exceeds height */
+  }
+  
+  /* DRAWER SLIDES UP FROM BOTTOM */
+  .desktop-nav.active {
+    transform: translateY(0) !important;
+  }
+  /* DRAWER OPENS */
+  .desktop-nav.active {
+    left: 0 !important;
+  }
+  
+  /* DRAWER MENU ITEMS */
+  .nav-link {
+    width: calc(100% - 40px);
+    font-size: 22px;
+    padding: 22px 30px;
+    margin: 0 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: left;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #c9a74f;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    transform: scaleY(1);
+  }
+  
+  .nav-link:hover {
+    background: rgba(201, 167, 79, 0.15) !important;
+    color: #c9a74f !important;
+    transform: translateX(10px);
+    box-shadow: 0 5px 20px rgba(201, 167, 79, 0.2);
+  }
+  
+  .logo-img { height: 50px; }
+  .navbar { padding: 15px 20px; }
+}
+
+/* BACKDROP */
+.mobile-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .desktop-nav {
+    width: 280px;
+    left: -300px;
+  }
+  .logo-img { height: 45px; }
+  .nav-link {
+    font-size: 20px;
+    padding: 18px 25px;
+    margin: 0 15px;
+  }
+}
+
+/* EXTRA SMALL */
+@media (max-width: 360px) {
+  .desktop-nav {
+    width: 100vw;
+    left: -100vw;
+  }
+  .logo-img { height: 40px; }
 }
