@@ -154,7 +154,11 @@ const Gallery = () => {
 
       {/* GALLERY */}
       <section className="gallery-section" id="gallery">
-        <h2 className="section-title reveal">Store Gallery</h2>
+        <h2 className="section-title reveal">
+  <span className="store-word">STORE</span>
+  <span className="gallery-word">GALLERY</span>
+</h2>
+
 
         <div className="gallery-grid">
           {IMAGES.map((src, idx) => (
