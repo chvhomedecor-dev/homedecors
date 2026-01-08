@@ -157,12 +157,15 @@ const Contact = () => {
         <p className="map-sub">HD Home Decor – Living Lives Your Dreams</p>
 
         <div className="map-container">
-          <iframe
-            title="Store Location"
-            src="https://www.google.com/maps?q=Opp+Old+Murali+Theatre,+Srikakulam,+Andhra+Pradesh&output=embed"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+<iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3788.15336299985!2d83.9017167!3d18.2945934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3c15106547c931%3A0x134d6b9f6289a812!2sHome%20Decor!5e0!3m2!1sen!2sin!4v1767878291886!5m2!1sen!2sin" 
+  width="100%" 
+  height="450" 
+  style={{ border: 0 }}  // ✅ FIXED: Object notation
+  allowFullScreen="" 
+  loading="lazy" 
+  referrerPolicy="no-referrer-when-downgrade"
+/>
         </div>
       </section>
 

@@ -57,7 +57,7 @@ const Navbar = () => {
             to="/gallery" 
             onClick={closeMenu}
           >
-            Gallery
+            Store Gallery
           </NavLink>
           <NavLink 
             className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}

@@ -1,5 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Gallery.css";
+
+const IMAGESROLL = [
+  "/images/360/R0014997_20220628213120.jpg",
+  "/images/360/R0014998_20220628213149.jpg",
+  "/images/360/R0014999_20220628213223.jpg",
+  "/images/360/R0015000_20220628213253.jpg",
+  "/images/360/R0015001_20220628213334.jpg",
+];
 
 const IMAGES = [
   // Row 1
@@ -21,8 +29,19 @@ const IMAGES = [
 ];
 
 const Gallery = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Auto-sliding carousel
   useEffect(() => {
-    // Scroll reveal
+    const slideInterval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % IMAGESROLL.length);
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(slideInterval);
+  }, []);
+
+  // Scroll reveal
+  useEffect(() => {
     const reveals = document.querySelectorAll(".reveal");
     const onScroll = () => {
       reveals.forEach((el) => {
@@ -37,8 +56,8 @@ const Gallery = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Lightbox events
   useEffect(() => {
-    // Lightbox events handled with state-like DOM manipulation
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
 
@@ -67,12 +86,54 @@ const Gallery = () => {
     };
   }, []);
 
+  // Manual slide navigation
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % IMAGESROLL.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + IMAGESROLL.length) % IMAGESROLL.length);
+  };
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
+
   return (
     <div className="gallery-page">
-      {/* HEADER */}
+      {/* HERO CAROUSEL */}
+      <section className="hero-carousel reveal active">
+        <div className="carousel-container">
+          {IMAGESROLL.map((src, idx) => (
+            <img
+              key={idx}
+              src={src}
+              alt={`Slide ${idx + 1}`}
+              className={`carousel-image ${idx === currentSlide ? "active" : ""}`}
+            />
+          ))}
+        </div>
 
-      {/* HERO */}
-      <section className="hero reveal active">
+        {/* Carousel Controls */}
+        <button className="carousel-btn prev" onClick={prevSlide}>
+          ❮
+        </button>
+        <button className="carousel-btn next" onClick={nextSlide}>
+          ❯
+        </button>
+
+        {/* Carousel Indicators */}
+        <div className="carousel-indicators">
+          {IMAGESROLL.map((_, idx) => (
+            <button
+              key={idx}
+              className={`indicator ${idx === currentSlide ? "active" : ""}`}
+              onClick={() => goToSlide(idx)}
+            />
+          ))}
+        </div>
+
+        {/* Hero Content Overlay */}
         <div className="hero-content">
           <h1>Step Into Luxury Living</h1>
           <p>
@@ -99,7 +160,7 @@ const Gallery = () => {
       <section className="extra-section reveal">
         <h2>Experience Home Decor Differently</h2>
         <p>
-          Our store is not just a place to buy decor; it’s a journey into
+          Our store is not just a place to buy decor; it's a journey into
           refined living. Every display, every corner, and every curated piece
           reflects our commitment to craftsmanship, quality, and timeless
           elegance. Step in and feel the inspiration, the balance, and the

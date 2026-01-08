@@ -1,95 +1,235 @@
 .decor-footer { 
-  background: linear-gradient(135deg, #0b2a59, #020c1b);
-  color: white;
+  background: linear-gradient(145deg, 
+    var(--grey-dark) 0%, 
+    var(--grey-medium) 35%, 
+    rgba(43,52,69,0.95) 100%);
+  backdrop-filter: blur(40px) saturate(160%);
+  color: var(--white);
   position: relative;
   overflow: hidden;
-  padding: 60px 50px 25px;
-  font-family: "Playfair Display", serif;
+  padding: 80px 60px 40px;
+  font-family: "Cinzel", "Playfair Display", serif;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 
+    inset 0 -4px 24px rgba(0,0,0,0.3),
+    0 -12px 48px rgba(0,0,0,0.2);
 }
 
-/* WE DEAL IN */
+/* ELEVATED WE DEAL IN */
 .footer-deal { 
   text-align: center;
-  padding: 40px 20px 20px;
-  margin-bottom: 40px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-.footer-deal h3 { 
-  font-size: 20px;
-  letter-spacing: 2px;
-  color: #c9a74f;
-  margin-bottom: 18px;
-  font-weight: 600;
-}
-.footer-deal p { 
-  max-width: 1100px;
-  margin: 0 auto;
-  font-size: 14px;
-  line-height: 1.9;
-  color: #e6ecf5;
-  opacity: 0.9;
-}
-.footer-deal span { 
-  color: #c9a74f;
-  margin: 0 6px;
+  padding: 60px 40px;
+  margin: 60px 0 80px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(25px);
+  border-radius: 28px;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 
+    0 20px 60px rgba(0,0,0,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+  position: relative;
+  overflow: hidden;
 }
 
-/* TOP GRID – same structure on all screens */
-.footer-top { 
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 40px;
+.footer-deal::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(104,211,145,0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255,255,255,0.08) 0%, transparent 50%);
+  pointer-events: none;
+  animation: dealGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes dealGlow {
+  0% { opacity: 0.6; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.02); }
+}
+
+.footer-deal h3 { 
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  letter-spacing: 3px;
+  background: linear-gradient(135deg, var(--leaf-green), var(--leaf-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 24px;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 4px 16px rgba(104,211,145,0.3);
+}
+
+.footer-deal p { 
+  max-width: 900px;
+  margin: 0 auto 20px;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: rgba(255,255,255,0.92);
+  font-weight: 300;
   position: relative;
   z-index: 2;
 }
 
-/* COLUMN HEADINGS */
-.footer-col h4 { 
-  font-size: 14px;
-  letter-spacing: 1.5px;
-  margin-bottom: 18px;
+.footer-deal span { 
+  background: linear-gradient(135deg, var(--leaf-light), var(--leaf-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-weight: 600;
-  color: #c9a74f;
+  margin: 0 8px;
+  animation: pulseGlow 2s ease-in-out infinite alternate;
 }
 
-/* LINKS */
+@keyframes pulseGlow {
+  0% { filter: drop-shadow(0 0 4px var(--leaf-glow)); }
+  100% { filter: drop-shadow(0 0 12px var(--leaf-glow)); }
+}
+
+/* SOPHISTICATED GRID */
+.footer-top { 
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 60px;
+  position: relative;
+  z-index: 3;
+  margin-bottom: 60px;
+}
+
+/* ELEGANT COLUMN HEADINGS */
+.footer-col h4 { 
+  font-size: 16px;
+  letter-spacing: 2.5px;
+  margin-bottom: 28px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--leaf-green), var(--leaf-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--leaf-green), var(--leaf-light));
+  border-radius: 1px;
+}
+
+/* REFINED LINKS */
 .footer-col ul { 
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .footer-col ul li { 
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
+
 .footer-col ul li a { 
-  color: #e6ecf5;
+  color: rgba(255,255,255,0.88);
   text-decoration: none;
-  font-size: 14px;
-  opacity: 0.85;
-  transition: 0.3s;
-  display: block;
-}
-.footer-col ul li a:hover { 
-  color: #c9a74f;
-  padding-left: 6px;
-}
-
-/* TEXT */
-.footer-col p { 
-  font-size: 14px;
-  margin-bottom: 10px;
-  color: #e6ecf5;
+  font-size: 15px;
+  font-weight: 400;
   opacity: 0.9;
-  line-height: 1.8;
+  transition: all 0.4s cubic-bezier(0.23,1,0.320,1);
+  display: block;
+  padding: 8px 12px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
 }
 
-/* OPTIONAL: keep layout stable on small screens (no grid changes) */
-@media (max-width: 600px) {
-  .decor-footer {
-    padding: 40px 20px 20px;
-  }
-  /* Still 4 columns, but allow horizontal scroll instead of stacking */
+.footer-col ul li a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 1px;
+  background: var(--leaf-green);
+  transform: translateY(-50%);
+  transition: width 0.4s ease;
+}
+
+.footer-col ul li a:hover { 
+  color: var(--leaf-light);
+  padding-left: 20px;
+  background: rgba(104,211,145,0.12);
+  backdrop-filter: blur(10px);
+  transform: translateX(8px);
+  box-shadow: 0 8px 24px rgba(104,211,145,0.2);
+}
+
+.footer-col ul li a:hover::before {
+  width: 100%;
+}
+
+/* ELEVATED TEXT */
+.footer-col p { 
+  font-size: 15px;
+  margin-bottom: 16px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.75;
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* RESPONSIVE ELEGANCE */
+@media (max-width: 1024px) {
   .footer-top {
-    overflow-x: auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
   }
+}
+
+@media (max-width: 768px) {
+  .decor-footer {
+    padding: 60px 32px 32px;
+  }
+  
+  .footer-deal {
+    padding: 48px 28px;
+    margin: 48px 0 60px;
+  }
+  
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 400px;
+    margin: 0 auto 48px;
+  }
+  
+  .footer-col h4 {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .decor-footer {
+    padding: 48px 24px 24px;
+  }
+  
+  .footer-deal {
+    padding: 40px 20px;
+    margin: 40px 0;
+  }
+  
+  .footer-top {
+    gap: 32px;
+  }
+}
+
+/* PERFORMANCE */
+.footer-col ul li a,
+.footer-col p {
+  will-change: transform;
+  contain: layout style;
 }
