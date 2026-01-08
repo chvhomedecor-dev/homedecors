@@ -3,21 +3,21 @@ import "./Gallery.css";
 
 const IMAGES = [
   // Row 1
-  "https://images.unsplash.com/photo-1615874959474-d609969a20ed",
-  "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+  "/images/HD/1657195887500.jpg",
+  "/images/HD/1657195887529.jpg",
+  "/images/HD/1657195887555.jpg",
   // Row 2
-  "https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a",
-  "https://images.unsplash.com/photo-1618220179428-22790b461013",
-  "https://images.unsplash.com/photo-1600210492493-0946911123ea",
+  "/images/HD/1657195887579.jpg",
+  "/images/HD/1657195887600.jpg",
+  "/images/HD/1657195887626.jpg",
   // Row 3
-  "https://images.unsplash.com/photo-1617806118233-18e1de247200",
-  "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf",
-  "https://images.unsplash.com/photo-1617104678098-de229db51175",
+  "/images/HD/1657195887647.jpg",
+  "/images/HD/1657195887669.jpg",
+  "/images/HD/1657195887695.jpg",
   // Row 4
-  "https://images.unsplash.com/photo-1615875605825-5eb9bb5d52ac",
-  "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b",
-  "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+  "/images/HD/1657195887729.jpg",
+  "/images/HD/1657195887780.jpg",
+  "/images/HD/1657195887810.jpg",
 ];
 
 const Gallery = () => {
