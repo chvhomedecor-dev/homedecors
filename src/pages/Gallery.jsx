@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./Gallery.css";
 
 const IMAGESROLL = [
-  "/images/360/R0014997_20220628213120.jpg",
-  "/images/360/R0014998_20220628213149.jpg",
-  "/images/360/R0014999_20220628213223.jpg",
-  "/images/360/R0015000_20220628213253.jpg",
-  "/images/360/R0015001_20220628213334.jpg",
+  "/images/360/R0014997_20220628213120.JPG",
+  "/images/360/R0014998_20220628213149.JPG",
+  "/images/360/R0014999_20220628213223.JPG",
+  "/images/360/R0015000_20220628213253.JPG",
+  "/images/360/R0015001_20220628213334.JPG",
 ];
 
 const IMAGES = [
