@@ -1,4 +1,4 @@
-/* =========================
+/* /* =========================
    ABOUT.CSS – PERFECT FINAL VERSION
    ALL SIZES PERFECTLY ADJUSTED
    ========================= */
@@ -690,4 +690,65 @@ body {
   .section { padding: 60px 5%; }
   .hero-content h1 { letter-spacing: -0.03em; }
   .footer-deal { padding: 35px 20px; }
+} 
+
+/* Body background + text */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom, #f5efe6, #f1f1f3); /* plaster → grey */
+  color: #111;
+}
+
+/* Header / navbar */
+.header {
+  background: #545863; /* grey instead of deep blue */
+}
+
+.logo:hover {
+  color: #6a8f3f; /* leaf green */
+}
+
+.nav a::after {
+  background: linear-gradient(90deg, #6a8f3f, #a4c76d); /* leaf tones */
+}
+
+.nav a:hover {
+  color: #6a8f3f;
+}
+
+/* Section titles */
+.section-title,
+.story-text h2,
+.location-box h3,
+.emotional-content h2 {
+  color: #545863;
+}
+
+/* Cards and boxes */
+.philosophy,
+.principle-card,
+.info-card,
+.location-box,
+.store-contact {
+  background: #f5efe6;            /* plaster */
+  border: 1px solid #ffffffcc;
+}
+
+/* Icon and accent color */
+.principle-card i,
+.info-card i,
+.store-contact i,
+.footer-social a,
+.footer-deal span {
+  color: #6a8f3f;                  /* leaf green accent */
+}
+
+/* Lines / dividers */
+.emotional-line {
+  background: linear-gradient(90deg, #6a8f3f, #a4c76d);
+}
+
+/* Footer background */
+.decor-footer {
+  background: linear-gradient(135deg, #545863 0%, #272a33 100%);
 }

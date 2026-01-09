@@ -72,22 +72,22 @@ const Home = () => {
       <section>
         <h2 className="section-title reveal">Our Core Principles</h2>
         <div className="principles">
-          <div className="principle-card reveal delay-1">
+          <div className="principle-card-home reveal delay-1">
             <i className="fa-solid fa-gem"></i>
             <h3>Refined Selection</h3>
             <p>Chosen for craftsmanship, material quality, and visual harmony.</p>
           </div>
-          <div className="principle-card reveal delay-2">
+          <div className="principle-card-home reveal delay-2">
             <i className="fa-solid fa-leaf"></i>
             <h3>Timeless Aesthetics</h3>
             <p>Designs that remain relevant beyond trends and seasons.</p>
           </div>
-          <div className="principle-card reveal delay-3">
+          <div className="principle-card-home reveal delay-3">
             <i className="fa-solid fa-heart"></i>
             <h3>Thoughtful Design</h3>
             <p>Decor that enhances mood, space, and everyday living.</p>
           </div>
-          <div className="principle-card reveal delay-4">
+          <div className="principle-card-home reveal delay-4">
             <i className="fa-solid fa-gift"></i>
             <h3>Versatile Styling</h3>
             <p>Pieces that blend effortlessly into different interior styles.</p>
@@ -147,36 +147,41 @@ const Home = () => {
       </section>
 
       {/* SIGNATURE COLLECTION */}
-      <section className="signature reveal">
-        <h2 className="section-title">Signature Collection</h2>
-        <p className="sig-desc">
-          Explore select pieces that embody our design philosophy — timeless,
-          elegant, and thoughtfully curated.
-        </p>
-        <div className="sig-grid">
-          <div className="sig-card reveal delay-1">
-            <h3>Elevated Decor Elements</h3>
-            <p className="sig-desc">
-              From elegant vases to refined tabletop pieces, our elevated decor
-              elements add sophistication.
-            </p>
-          </div>
-          <div className="sig-card reveal delay-2">
-            <h3>Decorative Ceramics</h3>
-            <p className="sig-desc">
-              Handcrafted ceramics that combine artful design and functional
-              beauty.
-            </p>
-          </div>
-          <div className="sig-card reveal delay-3">
-            <h3>Elegant Accents</h3>
-            <p className="sig-desc">
-              Statement pieces selected for their silhouettes and harmonious
-              proportions.
-            </p>
-          </div>
-        </div>
-      </section>
+     <section className="signature-home reveal-home">
+  <h2 className="section-title-home">Signature Collection</h2>
+
+  <p className="sig-desc-home">
+    Explore select pieces that embody our design philosophy — timeless,
+    elegant, and thoughtfully curated.
+  </p>
+
+  <div className="sig-grid-home">
+    <div className="sig-card-home reveal delay-1">
+      <h3>Elevated Decor Elements</h3>
+      <p className="sig-desc-home">
+        From elegant vases to refined tabletop pieces, our elevated decor
+        elements add sophistication.
+      </p>
+    </div>
+
+    <div className="sig-card-home reveal delay-2">
+      <h3>Decorative Ceramics</h3>
+      <p className="sig-desc-home">
+        Handcrafted ceramics that combine artful design and functional
+        beauty.
+      </p>
+    </div>
+
+    <div className="sig-card-home reveal delay-3">
+      <h3>Elegant Accents</h3>
+      <p className="sig-desc-home">
+        Statement pieces selected for their silhouettes and harmonious
+        proportions.
+      </p>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };
