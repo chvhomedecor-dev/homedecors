@@ -102,6 +102,17 @@ const categoriesData = [
       },
     ],
   },
+  {
+  name: "Cloth Hangers",
+  quote: "Stylish and sturdy hangers for every wardrobe",
+  hero: "/images/clothhangers/hanger_hero_img.jpg",
+  products: [
+    { name: "AeroLift Classic", img: "/images/clothhangers/ch11.png" },
+    { name: "Wooden Hangers", img: "/images/clothhangers/wooden hanger.jpg" },
+    { name: "Sky Rack Elite", img: "/images/clothhangers/sky_rack_elitee.png" },
+    { name: "Laundry Hangers", img: "/images/clothhangers/laundry_drying_rack.png" },
+  ],
+}
 ];
 
 const Products = () => {
