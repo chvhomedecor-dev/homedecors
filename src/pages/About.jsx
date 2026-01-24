@@ -66,7 +66,6 @@ const About = () => {
           </p>
           <div className="philosophy-images">
             <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=800" alt="Decor Philosophy" className="philosophy-img" />
-            <img src="https://images.unsplash.com/photo-1600180758895-0d6f1b4f5c4c?w=800" alt="Decor Inspiration" className="philosophy-img" />
           </div>
         </div>
       </section>

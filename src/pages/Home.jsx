@@ -181,6 +181,67 @@ const Home = () => {
     </div>
   </div>
 </section>
+<section className="whatsapp">
+  <button
+    onClick={() =>
+      window.open(
+        "https://wa.me/919666193636?text=Hi%20I%20am%20interested%20in%20your%20services",
+        "_blank"
+      )
+    }
+  >
+    <i className="fa-brands fa-whatsapp"></i>
+  </button>
+</section>
+<section class="feedback-section">
+  <h2 class="feedback-title">What Our Customers Say</h2>
+
+  <div class="feedback-slider">
+    <div class="feedback-track">
+      
+      <div class="feedback-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">
+          Elegant designs and premium quality. Our home feels completely transformed.
+        </p>
+        <span class="reviewer">— Anjali R.</span>
+      </div>
+
+      <div class="feedback-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">
+          Outstanding service and beautiful decor collections. Highly recommended!
+        </p>
+        <span class="reviewer">— Ramesh K.</span>
+      </div>
+
+      <div class="feedback-card">
+        <div class="stars">★★★★☆</div>
+        <p class="review-text">
+          Loved the wallpapers and curtains. The finishing is top-notch.
+        </p>
+        <span class="reviewer">— Sravani P.</span>
+      </div>
+
+      <div class="feedback-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">
+          Professional team with a great eye for detail. Truly premium interiors.
+        </p>
+        <span class="reviewer">— Naveen S.</span>
+      </div>
+
+      <div class="feedback-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">
+          Elegant designs and premium quality. Our home feels completely transformed.
+        </p>
+        <span class="reviewer">— Anjali R.</span>
+      </div>
+
+    </div>
+  </div>
+</section>
 
     </div>
   );

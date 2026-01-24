@@ -135,7 +135,8 @@ const Contact = () => {
         <div className="info-card animate-card">
           <strong>Business Hours</strong>
           <br />
-          Mon – Sat | 10:00 AM – 7:00 PM
+          Mon – Sun <br/>
+          10:00 AM – 10:00 PM
         </div>
 
         <div className="info-card animate-card">
