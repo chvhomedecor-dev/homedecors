@@ -90,7 +90,7 @@ const categoriesData = [
       { name: "Wall Murals", img: "/images/wall_murals.jpg" },
       { name: "Statues", img: "/images/buddha1.jpg" },
       { name: "Artifacts", img: "/images/artifacts.jpg" },
-      { name: "Wet Cloth Hangers", img: "/images/wet_cloth_hangers.jpg" },
+      //{ name: "Wet Cloth Hangers", img: "/images/wet_cloth_hangers.jpg" },
       // { name: "Invisible Grills", img: "/images/invisible_grills.jpg" },
       // {
       //   name: "Mosquito Sliding Doors",
