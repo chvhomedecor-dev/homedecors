@@ -91,17 +91,30 @@ const categoriesData = [
       { name: "Statues", img: "/images/buddha1.jpg" },
       { name: "Artifacts", img: "/images/artifacts.jpg" },
       { name: "Wet Cloth Hangers", img: "/images/wet_cloth_hangers.jpg" },
-      { name: "Invisible Grills", img: "/images/invisible_grills.jpg" },
-      {
-        name: "Mosquito Sliding Doors",
-        img: "/images/mosliding.jpg",
-      },
-      {
-        name: "Metal Sliding Doors & etc.",
-        img: "/images/metal_sliding.jpg",
-      },
+      // { name: "Invisible Grills", img: "/images/invisible_grills.jpg" },
+      // {
+      //   name: "Mosquito Sliding Doors",
+      //   img: "/images/mosliding.jpg",
+      // },
+      // {
+      //   name: "Metal Sliding Doors & etc.",
+      //   img: "/images/metal_sliding.jpg",
+      // },
     ],
   },
+  // {
+  //   "name": "PVC Doors",
+  //   "quote": "Durable, stylish, and low-maintenance doors for every home and office",
+  //   "hero": "/images/pvcdoors/heropvc.jpg",
+  //   "products": [
+  //     { "name": "", "img": "/images/pvcdoors/PVC1.jpg" },
+  //     { "name": "", "img": "/images/pvcdoors/PVC2.jpg" },
+  //     { "name": "", "img": "/images/pvcdoors/PVC3.jpg" },
+  //     { "name": "", "img": "/images/pvcdoors/PVC4.jpg" },
+  //     { "name": "", "img": "/images/pvcdoors/PVC5.webp" },
+  //     { "name": "", "img": "/images/pvcdoors/PVC6.webp" }
+  //   ] 
+  // },
   {
   name: "Cloth Hangers",
   quote: "Stylish and sturdy hangers for every wardrobe",
