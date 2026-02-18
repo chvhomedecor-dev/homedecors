@@ -266,7 +266,7 @@ const Products = () => {
                   onClick={() => {
                     const link = document.createElement("a");
                     link.href =
-                      "https://drive.google.com/uc?export=download&id=1jcyl-9IIA7MEEqQqIT3IDyj8uTC6zR6q";
+                    "https://drive.google.com/uc?export=download&id=1_qjWSR3dJG-yd43BpD8TvR_zYTdJjnXB";
                     link.download = "Pare-Catalogue.pdf";
                     document.body.appendChild(link);
                     link.click();
@@ -283,7 +283,8 @@ const Products = () => {
                   onClick={() => {
                     const link = document.createElement("a");
                     link.href =
-                      "https://drive.google.com/uc?export=download&id=1_qjWSR3dJG-yd43BpD8TvR_zYTdJjnXB";
+                    "https://drive.google.com/uc?export=download&id=1jcyl-9IIA7MEEqQqIT3IDyj8uTC6zR6q";
+
                     link.download = "Ox-Ceiling-Catalogue.pdf";
                     document.body.appendChild(link);
                     link.click();
