@@ -717,3 +717,24 @@ header {
   background: linear-gradient(135deg, var(--grey-premium), #020c1b);
 }
 
+.ceiling-button-wrapper {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.ceiling-main-btn {
+  padding: 12px 30px;
+  border-radius: 30px;
+  background: #111;
+  color: #fff;
+  border: 1px solid #111;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.ceiling-main-btn:hover {
+  background: transparent;
+  color: #111;
+  transform: translateY(-3px);
+}

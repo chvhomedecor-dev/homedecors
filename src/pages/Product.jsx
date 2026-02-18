@@ -12,7 +12,7 @@ const categoriesData = [
       { name: "Artificial Plants", img: "/images/artificial_plants.jpg" },
       { name: "Vertical Grass", img: "/images/vertical_grass.jpg" },
       { name: "Planters", img: "/images/planters.jpg" },
-      { name: "Vases & Pots", img: "/images/Home_decor_vases.jpg" },
+      { name: "Aroma Diffuser", img: "/images/aroma_diffuser/ard.jpg" },
     ],
   },
   {
@@ -23,6 +23,9 @@ const categoriesData = [
       { name: "Interior & Exterior Blinds", img: "/images/blinds_hero.jpg" },
       { name: "Remote Blinds", img: "/images/remote_blinds.jpg" },
       { name: "Customised Blinds", img: "/images/Customizwd_blinds.jpg" },
+      { name: "Zebra Blinds", img: "/images/blinds/zebra.jpg" },
+      { name: "Roller Blinds", img: "/images/blinds/roller_blinds.webp" },
+      { name: "Beed Curtains", img: "/images/blinds/beed curtains.jpg" },
     ],
   },
   {
@@ -33,6 +36,7 @@ const categoriesData = [
       { name: "Smart Curtains", img: "/images/smart_curtains.jpg" },
       { name: "Remote Curtains", img: "/images/remote_curtains.jpg" },
       { name: "Customised Print Curtains", img: "/images/print_curtains.jpg" },
+      { name: "Carpet", img: "/images/carpet/carpet.avif" },
     ],
   },
   {
@@ -41,10 +45,7 @@ const categoriesData = [
     hero: "/images/wallpaper_hero.jpg",
     products: [
       { name: "Imported Wall Papers", img: "/images/imported_wallpaper.jpg" },
-      {
-        name: "Customised Wall Papers",
-        img: "/images/customised_wallpapers.jpg",
-      },
+      { name: "Customised Wall Papers", img: "/images/customised_wallpapers.jpg" },
       { name: "Fabric Wall Papers", img: "/images/fabric_wallpaper.jpg" },
       { name: "Embosed Wall Papers", img: "/images/embosed_wallpaper.jpg" },
       { name: "Water Proof Wall Papers", img: "/images/waterproof_wallpaper.jpg" },
@@ -52,29 +53,37 @@ const categoriesData = [
     ],
   },
   {
-    name: "Floorings",
-    quote: "Strong foundations with premium finish",
-    hero: "/images/flooring_hero.jpg",
+    name: "Pare & Ox Ceiling",
+    quote: "Crafting interiors from the top down with timeless elegance.",
+    hero: "/images/ceiling/hero_ceiling.png",
     products: [
-      { name: "PVC Floorings", img: "/images/pvc.jpg" },
-      { name: "Vinyl Plank Floorings", img: "/images/vinyl.jpg" },
-      { name: "SPC Floorings", img: "/images/spc.jpg" },
-      { name: "Wooden Floorings", img: "/images/wooden.jpg" },
-      { name: "Carpet Floorings", img: "/images/carpet.jpg" },
+      { name: "Baffel", img: "/images/ceiling/baffel.png" },
+      { name: "Classic WallNut", img: "/images/ceiling/classicwallnut.png" },
+      { name: "Golden Oak", img: "/images/ceiling/goldenoak.png" },
+      { name: "Wall", img: "/images/ceiling/sheet.png" },
+      { name: "External Walls", img: "/images/ceiling/externalwalls.png" },
+      { name: "Prism", img: "/images/ceiling/prism.png" },
     ],
   },
   {
     name: "Pebble Stones",
     quote: "Nature-inspired surface details",
-    hero: "https://res.cloudinary.com/dke6jolvx/image/upload/v1767743326/pebble_hero_oambeg.jpg",
+    hero:
+      "https://res.cloudinary.com/dke6jolvx/image/upload/v1767743326/pebble_hero_oambeg.jpg",
     products: [
-      { name: "Assorted Pebbles", img: "https://res.cloudinary.com/dke6jolvx/image/upload/v1767743289/assorted_pebble_utynlb.jpg" },
-      { name: "Polished Pebbles", img: "https://res.cloudinary.com/dke6jolvx/image/upload/v1767743326/polished_ejhyxv.jpg" },
-      { name: "Cobble Stones", img: "https://res.cloudinary.com/dke6jolvx/image/upload/v1767743293/cobble_stone_pq7vcx.jpg" },
       {
-        name: "Indoor & Outdoor Fountains",
-        img: "/images/fountain.jpg",
+        name: "Assorted Pebbles",
+        img: "https://res.cloudinary.com/dke6jolvx/image/upload/v1767743289/assorted_pebble_utynlb.jpg",
       },
+      {
+        name: "Polished Pebbles",
+        img: "https://res.cloudinary.com/dke6jolvx/image/upload/v1767743326/polished_ejhyxv.jpg",
+      },
+      {
+        name: "Cobble Stones",
+        img: "https://res.cloudinary.com/dke6jolvx/image/upload/v1767743293/cobble_stone_pq7vcx.jpg",
+      },
+      { name: "Indoor & Outdoor Fountains", img: "/images/fountain.jpg" },
     ],
   },
   {
@@ -82,50 +91,44 @@ const categoriesData = [
     quote: "Artistic expressions for interiors",
     hero: "/images/mural_hero.jpg",
     products: [
+      { name: "Customised Murals", img: "/images/murals/shopping.webp" },
       { name: "Handicrafts", img: "/images/handicrafts.jpg" },
-      {
-        name: "Interior & Exterior Murals",
-        img: "/images/exterior_murals.jpg",
-      },
+      { name:"Radha Krishna Wall Mural", img: "/images/murals/radhakrishna.webp"},
+      { name: "Birds", img: "/images/murals/birds.png" },
+      { name: "Interior & Exterior Murals", img: "/images/exterior_murals.jpg" },
+      { name:"wall Murals", img: "/images/murals/budhleaves.webp" },
       { name: "Wall Murals", img: "/images/wall_murals.jpg" },
       { name: "Statues", img: "/images/buddha1.jpg" },
-      { name: "Artifacts", img: "/images/artifacts.jpg" },
-      //{ name: "Wet Cloth Hangers", img: "/images/wet_cloth_hangers.jpg" },
-      // { name: "Invisible Grills", img: "/images/invisible_grills.jpg" },
-      // {
-      //   name: "Mosquito Sliding Doors",
-      //   img: "/images/mosliding.jpg",
-      // },
-      // {
-      //   name: "Metal Sliding Doors & etc.",
-      //   img: "/images/metal_sliding.jpg",
-      // },
+      { name: "Artifacts", img: "/images/artifacts.jpg"},
+      { name:"3D Murals", img: "/images/murals/budha_fountain.jpeg"},
+      { name:"Wall Decoraions", img: "/images/murals/balaji_painting.webp"},
+      { name:"Wall Mural", img: "/images/murals/buddha-wall-mural.jpg"},
     ],
   },
-  // {
-  //   "name": "PVC Doors",
-  //   "quote": "Durable, stylish, and low-maintenance doors for every home and office",
-  //   "hero": "/images/pvcdoors/heropvc.jpg",
-  //   "products": [
-  //     { "name": "", "img": "/images/pvcdoors/PVC1.jpg" },
-  //     { "name": "", "img": "/images/pvcdoors/PVC2.jpg" },
-  //     { "name": "", "img": "/images/pvcdoors/PVC3.jpg" },
-  //     { "name": "", "img": "/images/pvcdoors/PVC4.jpg" },
-  //     { "name": "", "img": "/images/pvcdoors/PVC5.webp" },
-  //     { "name": "", "img": "/images/pvcdoors/PVC6.webp" }
-  //   ] 
-  // },
   {
-  name: "Cloth Hangers",
-  quote: "Stylish and sturdy hangers for every wardrobe",
-  hero: "/images/clothhangers/hanger_hero_img.jpg",
-  products: [
-    { name: "AeroLift Classic", img: "/images/clothhangers/ch11.png" },
-    { name: "Wooden Hangers", img: "/images/clothhangers/wooden hanger.jpg" },
-    { name: "Sky Rack Elite", img: "/images/clothhangers/sky_rack_elitee.png" },
-    { name: "Laundry Hangers", img: "/images/clothhangers/laundry_drying_rack.png" },
-  ],
-}
+    name: "Cloth Hangers",
+    quote: "Stylish and sturdy hangers for every wardrobe",
+    hero: "/images/clothhangers/hanger_hero_img.jpg",
+    products: [
+      { name: "AeroLift Classic", img: "/images/clothhangers/ch11.png" },
+      { name: "Wooden Hangers", img: "/images/clothhangers/wooden hanger.jpg" },
+      { name: "Sky Rack Elite", img: "/images/clothhangers/sky_rack_elitee.png" },
+      { name: "Laundry Hangers", img: "/images/clothhangers/laundry_drying_rack.png" },
+    ],
+  },
+  {
+    name: "PVC Metal Doors",
+    quote: "Luxury Meets Lasting Protection.",
+    hero: "/images/pvcdoors/hero1.jpg",
+    products: [
+      { name: "", img: "/images/pvcdoors/pvc8.jpg" },
+      { name: "", img: "/images/pvcdoors/pvc10.webp" },
+      { name: "", img: "/images/pvcdoors/pvc7.webp "},
+      { name: "", img: "/images/pvcdoors/pvc13.webp" },
+      { name: "", img: "/images/pvcdoors/pvc14.png" },
+      { name: "", img: "/images/pvcdoors/pvc15.png" },
+    ],
+  },
 ];
 
 const Products = () => {
@@ -154,9 +157,7 @@ const Products = () => {
 
   const handleScrollToCategories = () => {
     const el = document.getElementById("categories-container");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
+    if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleBackTop = () => {
@@ -166,9 +167,7 @@ const Products = () => {
 
   const handleCategoryClick = (name) => {
     const el = document.getElementById(`cat-${name}`);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
+    if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
   const openModal = (product) => {
@@ -183,7 +182,6 @@ const Products = () => {
 
   return (
     <div className="page-wrapper">
-
       {/* HERO */}
       <section className="hero-products">
         <div className="hero-left">
@@ -259,6 +257,63 @@ const Products = () => {
                 </div>
               ))}
             </div>
+
+            {/* DOWNLOAD BUTTONS */}
+            {cat.name === "Pare & Ox Ceiling" && (
+              <div className="ceiling-button-wrapper">
+                <button
+                  className="ceiling-main-btn"
+                  onClick={() => {
+                    const link = document.createElement("a");
+                    link.href =
+                      "https://drive.google.com/uc?export=download&id=1jcyl-9IIA7MEEqQqIT3IDyj8uTC6zR6q";
+                    link.download = "Pare-Catalogue.pdf";
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }}
+                >
+                  Pare Catalogue
+                </button>
+
+                <span style={{ margin: "0 10px" }} />
+
+                <button
+                  className="ceiling-main-btn"
+                  onClick={() => {
+                    const link = document.createElement("a");
+                    link.href =
+                      "https://drive.google.com/uc?export=download&id=1_qjWSR3dJG-yd43BpD8TvR_zYTdJjnXB";
+                    link.download = "Ox-Ceiling-Catalogue.pdf";
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }}
+                >
+                  Ox Ceiling Catalogue
+                </button>
+              </div>
+            )}
+
+            {cat.name === "Murals" && (
+              <div className="ceiling-button-wrapper">
+                <button
+                  className="ceiling-main-btn"
+                  onClick={() => {
+                    const link = document.createElement("a");
+                    link.href =
+                      "https://drive.google.com/uc?export=download&id=1Cig-Q3DtJGZZMi_jJMPyWTvvqJzqEJ46";
+                    link.download = "Murals-Catalogue.pdf";
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }}
+                >
+                  Murals Catalogue
+                </button>
+              </div>
+            )}
+
           </div>
         ))}
       </div>
